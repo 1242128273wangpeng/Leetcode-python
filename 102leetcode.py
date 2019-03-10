@@ -1,8 +1,8 @@
 class TreeNode:
     def __init__(self,x):
         self.val = x
-        self.l = None
-        self.r = None
+        self.left = None
+        self.right = None
 
 class Solution:
     def __init__(self):
@@ -11,20 +11,46 @@ class Solution:
     def levelOrder(self,root):
         if root == None:
             return 
+        queue = [root]
         result = []
-        result.append(root)
-        while result:
+        print "root type",type(root)
+        while queue:
             ret = []
-            retlen = len(result)
+            retlen = len(queue)
             for i in range(retlen):
-                tmp = result.pop(0)
+                tmp = queue.pop(0)
+                print type(tmp),retlen
                 ret.append(tmp.val)
                 if tmp<>None and tmp.l<>None:
-                    ret.append(tmp.l)
+                    print "append l"
+                    queue.append(tmp.l)
                 if tmp<>None and tmp.r<>None:
-                    ret.append(tmp.r)
-        result.append(ret)
+                    print "append r"
+                    queue.append(tmp.r)
+            result.append(ret)
         print result
+
+    def levelOrder1(self,root):
+        res = []
+        queue = [root]
+        while queue:
+            len_queue = len(queue)
+            l = list()
+            for i in range(len_queue):
+                print "i",i
+                temp = queue.pop(0)
+                l.append(temp.val)
+                print "temp.val",temp.val
+                if temp!=None and temp.left !=None:
+                    print "add left",temp.left
+                    queue.append(temp.left)
+                if temp!=None and temp.right != None:
+                    print "add right",temp.right
+                    queue.append(temp.right)
+            print "append l",len_queue
+            res.append(l)
+        return res
+
 
 if __name__ == "__main__":
     a = TreeNode(3)
@@ -35,6 +61,6 @@ if __name__ == "__main__":
     a.l = b
     a.r = c
     s = Solution()
-    s.levelOrder(a)
+    s.levelOrder1(a)
 
 

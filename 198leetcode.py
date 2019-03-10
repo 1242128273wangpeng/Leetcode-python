@@ -7,6 +7,7 @@ class Solution:
         if idx<0:
             return 0
         if self.res[idx]>=0:
+            print ">=0",idx
             self.res[idx]
         else:
             self.res[idx] = max(self.solve(family,idx-1),family[idx]+self.solve(family,idx-2))
