@@ -1,7 +1,7 @@
 class Solution:
     def __init__(self):
         self.mstr = "abcbcbb"
-        print "3 leetcode solution"
+        print("3 leetcode solution")
 
 
     def solve(self):
@@ -9,7 +9,7 @@ class Solution:
         j = 0
         res = -1
         for i in range(len(self.mstr)):
-            if allmap.has_key(self.mstr[i]):
+            if self.mstr[i] in allmap:
                 j=allmap[self.mstr[i]]+1
             res = max(res,i-j+1) 
             allmap[self.mstr[i]] = i
@@ -30,5 +30,5 @@ class Solution:
     
 
 s = Solution()
-print s.solve()
+print(s.solve())
         

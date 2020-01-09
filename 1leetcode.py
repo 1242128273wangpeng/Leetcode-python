@@ -2,7 +2,7 @@ class Solution:
     def __init__(self):
         self.res = list()
         self.list = [2,7,11,15]
-        print "1leetcode Solution"
+        print("1leetcode Solution")
 
     def solve(self,target):
         l = 0
@@ -20,7 +20,7 @@ class Solution:
     def solve2(self,target):
         allmap = dict()
         for i in range(len(self.list)):
-            if allmap.has_key(target-self.list[i]):
+            if target-self.list[i] in allmap:
                 lastvalue = allmap[target-self.list[i]]
                 self.res.append(lastvalue)
                 self.res.append(i)
@@ -31,4 +31,4 @@ class Solution:
 
 s = Solution()
 #print s.solve(13)
-print s.solve2(13)
+print(s.solve2(13))

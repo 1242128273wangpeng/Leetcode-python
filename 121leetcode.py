@@ -1,6 +1,6 @@
 class Solution:
     def buy(self,prices):
-        print "buy"
+        print("buy")
         if len(prices)<2:
             return 0
         imin = prices[0]
@@ -16,7 +16,7 @@ s = Solution()
 t = [7,1,5,3,6,4]
 m = [7,6,4,3,1]
 c = []
-print s.buy(t)
+print(s.buy(t))
 
 
         

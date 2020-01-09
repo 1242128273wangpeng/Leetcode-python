@@ -1,6 +1,6 @@
 class Solution(object):
     def __init__(self):
-        print "98 leetcode solution"
+        print("98 leetcode solution")
 
     def solve(self,node):
             #self.helper(node,None,None)
@@ -37,4 +37,4 @@ n.left = l
 n.right = r
 
 #print "res is :",s.solve(n)
-print "res is :",s.solve(n)
+print("res is :",s.solve(n))

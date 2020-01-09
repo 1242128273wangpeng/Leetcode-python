@@ -1,6 +1,6 @@
 class Solution:
     def __init__(self):
-        print ""
+        print("")
 
     def solve(self,arr):
         if len(arr)==0 or len(arr[0])==0:
@@ -8,11 +8,11 @@ class Solution:
         res = 0
         n = len(arr)
         m = len(arr[0])
-        print n,m
+        print(n,m)
         for i in range(n):
             for j in range(m):
                 if arr[i][j]==1:
-                    print i,j
+                    print(i,j)
                     #self.dfs(arr,i,j)
                     self.bfs(arr,i,j)
                     res+=1
@@ -46,7 +46,7 @@ class Solution:
 if __name__ == "__main__":
     s = Solution()
     a = [[1,1,0,0,0],[1,1,0,0,0],[0,0,1,0,0],[0,0,0,1,1]]
-    print s.solve(a)
+    print(s.solve(a))
 
 
 

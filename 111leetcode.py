@@ -14,23 +14,23 @@ def solution(root):
     res = []
     while queue:
         q_len = len(queue)
-        print "len",q_len
+        print("len",q_len)
         temp = list()
         for i in range(0,q_len):
             node = queue.pop(0)
             temp.append(node.var)
-            print "node",node.var
+            print("node",node.var)
             if node.left==None and node.right==None:
-                print "level",level ,node.var
+                print("level",level ,node.var)
                 return level
             if node.left!=None:
                 queue.append(node.left)
-                print "add left",node.left.var
+                print("add left",node.left.var)
             if node.right!=None:
                 queue.append(node.right)
-                print "add right",node.right.var
+                print("add right",node.right.var)
         res.append(temp)
-        print res
+        print(res)
         level+=1
     return level
 
@@ -47,7 +47,7 @@ if __name__ == "__main__":
     b.right = f
     c.left = None
     c.right = g
-    print solution(a)
+    print(solution(a))
 
 
 

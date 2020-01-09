@@ -1,6 +1,6 @@
 class Solution:
     def __init__(self):
-        print "leetcode 188"
+        print("leetcode 188")
 
     def solve(self,hsum):
         res = []
@@ -11,7 +11,7 @@ class Solution:
                     res[i].append(1)
                 else:
                     res[i].append(res[i-1][j-1]+res[i-1][j])
-        print res
+        print(res)
         return res
 
 

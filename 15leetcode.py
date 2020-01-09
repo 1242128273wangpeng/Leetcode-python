@@ -1,7 +1,7 @@
 class Solution:
     def __init__(self):
         self.list = [-1, 0, 1, 2, -1, -4]
-        print "15leetcode solution"
+        print("15leetcode solution")
 
 
     def solve(self):
@@ -38,5 +38,5 @@ class Solution:
 s = Solution()
 r = s.solve()
 for i in r:
-    print i
+    print(i)
 

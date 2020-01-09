@@ -3,7 +3,7 @@ class Solution:
     def __init__(self):
         self.a = [1,2,3]
         self.res = []
-        print "permation"
+        print("permation")
 
     def perm1(self,idx):
         if idx>=len(self.a):
@@ -31,5 +31,5 @@ if __name__ == "__main__":
     s = Solution()
     res = []
     #print s.perm2(res)
-    print s.perm1(0)
+    print(s.perm1(0))
 

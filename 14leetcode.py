@@ -1,7 +1,7 @@
 class Solution:
     def __init__(self):
         self.list = ["flow","flower","fly"]
-        print "leetcode 14 solution"
+        print("leetcode 14 solution")
 
     def find(self):
         minlen = len(self.list[0])
@@ -11,11 +11,11 @@ class Solution:
 
         for k in range(0,minlen):
             for j in self.list:
-                if self.list[0][k]<>j[k]:
+                if self.list[0][k]!=j[k]:
                     return j[0:k]
 
         
             
 
 s = Solution()
-print s.find()
+print(s.find())

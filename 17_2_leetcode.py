@@ -5,12 +5,12 @@ class Solution:
             res.append("".join(path))
             return 
         digit= int(digits[index])
-        print "digit:",digit
+        print("digit:",digit)
         for c in d.get(digit,[]):
-            print c
+            print(c)
             path.append(c)
             self.dfs(digits,index+1,path,res,d)
-            print path
+            print(path)
             path.pop()
 
     def leeterCombine(self,digits):
@@ -22,5 +22,5 @@ class Solution:
         return res
  
 solution = Solution()
-print solution.leeterCombine("23")
-print type(solution),Solution
+print(solution.leeterCombine("23"))
+print(type(solution),Solution)

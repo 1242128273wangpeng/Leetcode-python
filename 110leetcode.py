@@ -30,5 +30,5 @@ if __name__=="__main__":
     b.l = TreeNode(4)
     b.r = TreeNode(5)
     c.l = TreeNode(7)
-    print "solution",solution(a)>0
+    print("solution",solution(a)>0)
     

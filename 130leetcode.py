@@ -1,7 +1,7 @@
 class Solution:
     def __init__(self):
         self.st =list()
-        print "130leetcode"
+        print("130leetcode")
 
     def solve(self,arr):
         n = len(arr)
@@ -19,7 +19,7 @@ class Solution:
                 self.bfs(arr,n-1,j)
         for a in range(n):
             for b in range(m):
-                if arr[a][b]<>"Y":
+                if arr[a][b]!="Y":
                     arr[a][b] = "X"
                 else:
                     arr[a][b] = "O"
@@ -34,7 +34,7 @@ class Solution:
             newx=x+dx[i]
             newy=y+dy[i]
             if newx>=0 and newx<len(arr) and newy>=0 and newy<len(arr[0]):
-                print newx,newy
+                print(newx,newy)
                 if arr[newx][newy]=="O":
                     self.dfs(arr,newx,newy)
 
@@ -56,5 +56,5 @@ class Solution:
 if __name__ == "__main__":
     s = Solution()
     arr =[["X","X","X","X"],["X","O","O","X"],["X","O","X","X"],["O","X","X","X"]]
-    print s.solve(arr)
+    print(s.solve(arr))
 

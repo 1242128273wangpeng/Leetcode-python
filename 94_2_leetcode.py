@@ -2,7 +2,7 @@ class Solution(object):
     def __init__(self):
         self.res = list()
         self.stack = list()
-        print "94 leetcode solution"
+        print("94 leetcode solution")
 
     def solve(self,cur):
         if cur is None:
@@ -38,4 +38,4 @@ n1.right =n2
 n2.left =n3
 
 s = Solution()
-print s.solve(n1)
+print(s.solve(n1))

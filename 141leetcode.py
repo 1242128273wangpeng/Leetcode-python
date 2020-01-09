@@ -5,19 +5,19 @@ class Node:
 
 class Solution:
     def __init__(self):
-        print "141leetcode"
+        print("141leetcode")
        
     def solve(self,head):
-        if head==None or head.next==None or head.next.next==None:
+        if head==None or head.__next__==None or head.next.__next__==None:
             return False
         else:
-            slow = head.next
-            fast = head.next.next
+            slow = head.__next__
+            fast = head.next.__next__
             while fast.value!=slow.value:
-                if slow.next==None or fast.next.next==None:
+                if slow.__next__==None or fast.next.__next__==None:
                     return False
-                slow = slow.next
-                fast = fast.next.next
+                slow = slow.__next__
+                fast = fast.next.__next__
             return True
 
 if __name__ == "__main__":
@@ -36,7 +36,7 @@ if __name__ == "__main__":
     e.next = f
     f.next = g
     g.next = c
-    print s.solve(a)
+    print(s.solve(a))
 
 
             

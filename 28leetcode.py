@@ -1,20 +1,20 @@
 class strStr:
     def __init__(self):
-        print "strStr init"
+        print("strStr init")
 
     def implement(self,haystack,needle):
         h = len(haystack)
         n = len(needle)
 
         for i in range(0,h-n+1):
-            print "i:",i
+            print("i:",i)
             for j in range(0,n):
-                print "j:",j
+                print("j:",j)
                 if haystack[i+j]!=needle[j]:
-                    print "no equal:",j
+                    print("no equal:",j)
                     break
                 else:
-                    print "equal:","j:",j,"n:",n
+                    print("equal:","j:",j,"n:",n)
                     if j+1==n:
                         return i;
            
@@ -22,4 +22,4 @@ class strStr:
 
 ss = strStr()
 #print ss.implement("mississippi","issip")
-print ss.implement("","")
+print(ss.implement("",""))

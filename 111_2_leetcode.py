@@ -3,7 +3,7 @@ class TreeNode:
         self.left = None
         self.right = None
         self.val = x
-        print ""
+        print("")
 
 
 def solution(root):
@@ -30,6 +30,6 @@ if __name__ == "__main__":
     d.left =f
     d.right = g
     f.left=TreeNode(4)
-    print solution(a)
+    print(solution(a))
 
 

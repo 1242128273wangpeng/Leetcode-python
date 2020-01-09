@@ -6,7 +6,7 @@ class TreeNode:
 
 def createTree(root,arr):
     return helper(root,arr,0)
-    print "sort",arr
+    print("sort",arr)
         
 def helper(root,arr,i):
     if i<len(arr):
@@ -14,7 +14,7 @@ def helper(root,arr,i):
             return None
         else:
             root = TreeNode(arr[i])
-            print "helper",arr[i]
+            print("helper",arr[i])
             root.left = helper(root.left,arr,2*i+1)
             root.right = helper(root.right,arr,2*i+2)
             return root
@@ -22,15 +22,15 @@ def helper(root,arr,i):
 
 def preTraversal(root):
     if root == None:
-        print "none"
+        print("none")
         return
     else:
-        print root.val
+        print(root.val)
         preTraversal(root.left)
         preTraversal(root.right)
 
 def find(root,reslist,total,nowlist):
-    print "root.val",root.val,"total",total,"now",nowlist
+    print("root.val",root.val,"total",total,"now",nowlist)
     if root==None:
         return reslist
     else:
@@ -50,6 +50,6 @@ if __name__ == "__main__":
     arr = ["1","2","3","#","4","5"]
     root = createTree(root,arr)
     preTraversal(root)
-    print find(root,[],9-int(root.val),[int(root.val)])
+    print(find(root,[],9-int(root.val),[int(root.val)]))
 
 

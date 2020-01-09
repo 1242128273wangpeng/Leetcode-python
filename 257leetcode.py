@@ -8,7 +8,7 @@ class TreeNode:
 
 class Solution:
     def __init__(self):
-        print "257leetcode"
+        print("257leetcode")
     
     def allpath(self,root):
         if root==None:
@@ -25,9 +25,9 @@ class Solution:
         if root.left==None and root.right==None:
             res.append(path)
         else:
-            if root.left<>None:
+            if root.left!=None:
                 self.solve(res,path+[root.left.val],root.left)
-            if root.right<>None:
+            if root.right!=None:
                 self.solve(res,path+[root.right.val],root.right)
         return res
    
@@ -43,14 +43,14 @@ class Solution:
         while nodes:
             t = nodes.pop()
             qt = q.pop()
-            print "qt",qt,"q",q
+            print("qt",qt,"q",q)
             if t.left==None and t.right==None:
                 res.append(copy.copy(qt))
             else:
-                if t.left<>None:
+                if t.left!=None:
                     q.append(str(qt)+"->"+str(t.left.val))
                     nodes.append(t.left)
-                if t.right<>None:
+                if t.right!=None:
                     q.append(str(qt)+"->"+str(t.right.val))
                     nodes.append(t.right)
         return res
@@ -70,10 +70,10 @@ class Solution:
             if t.left==None and t.right==None:
                 res.append(tv)
             else:
-                if t.left<>None:
+                if t.left!=None:
                     qv.append(str(tv)+"->"+str(t.left.val))
                     q.append(t.left)
-                if t.right<>None:
+                if t.right!=None:
                     qv.append(str(tv)+"->"+str(t.right.val))
                     q.append(t.right)
         return res
@@ -93,4 +93,4 @@ if __name__ == "__main__":
     b.right = e
     s = Solution()
     #print s.allpath(a)
-    print s.bfs(a)
+    print(s.bfs(a))

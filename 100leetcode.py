@@ -23,4 +23,4 @@ if __name__ == "__main__":
     b.l = TreeNode(9)
     b.r = TreeNode(3)
     s = Solution()
-    print s.sameTree(a,b)
+    print(s.sameTree(a,b))

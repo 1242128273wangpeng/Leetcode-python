@@ -1,7 +1,7 @@
 import copy
 class Solution:
     def __init__(self):
-        print "leetcode 39"
+        print("leetcode 39")
     
     def combinationSum(self):
         a = [3,2,4,7]
@@ -11,7 +11,7 @@ class Solution:
         return res
 
     def solve(self,arr,res,start,path,target):
-        print "target",target
+        print("target",target)
         if len(arr)==0:
             return 
         if target<0:
@@ -31,11 +31,11 @@ class Solution:
         #2
         for i in range(start,len(arr)):
             self.solve(arr,res,i,path+[arr[i]],target-arr[i])
-            print "i",i," path",path
+            print("i",i," path",path)
         
 if __name__ == "__main__":
     s = Solution()
-    print s.combinationSum()
+    print(s.combinationSum())
 
 
 

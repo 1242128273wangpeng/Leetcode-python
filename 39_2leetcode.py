@@ -24,4 +24,4 @@ class Solution:
 if __name__ == "__main__":
     s = Solution()
     a = [2,3,6,7]
-    print s.combinationSum(a,7)
+    print(s.combinationSum(a,7))

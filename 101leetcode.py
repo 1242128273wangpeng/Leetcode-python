@@ -29,5 +29,5 @@ if __name__ == "__main__":
     a.l = b
     a.r = c
     s = Solution()
-    print s.helper(a)
+    print(s.helper(a))
 

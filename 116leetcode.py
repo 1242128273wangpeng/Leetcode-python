@@ -1,6 +1,6 @@
 class Solution:
     def __init__(self):
-        print "leetcode 116"
+        print("leetcode 116")
 
 
     def solve(self):

@@ -9,7 +9,7 @@ class Solution:
         self.i = 0
     def helper(self,root,i):
         self.i = i
-        print "leetcode104",self.i
+        print("leetcode104",self.i)
         if root==None:
             return
         return max(self.helper(root.l,i+1),self.helper(root.r,i+1))
@@ -38,4 +38,4 @@ if __name__ == "__main__":
     s = Solution()
     #s.helper(a,s.i)
     #print "helper",s.i
-    print "helper2",s.helper2(a)
+    print("helper2",s.helper2(a))

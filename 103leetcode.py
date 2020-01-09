@@ -3,7 +3,7 @@ class Solution:
         self.res = []
         self.i = 0
         self.queue = []
-        print "zigzag"
+        print("zigzag")
 
     def helper(self,root):
         if root == None:
@@ -18,9 +18,9 @@ class Solution:
                     ret.append(temp.val)
                 else:
                     ret.insert(0,temp.val)
-                if temp<>None and temp.l<> None:
+                if temp!=None and temp.l!= None:
                     self.queue.append(temp.l)
-                if temp<>None and temp.r<> None:
+                if temp!=None and temp.r!= None:
                     self.queue.append(temp.r)
             self.res.append(ret)
             self.i+=1
@@ -45,4 +45,4 @@ if __name__ == "__main__":
     c.l = f
     s = Solution()
     s.helper(a)
-    print s.res
+    print(s.res)

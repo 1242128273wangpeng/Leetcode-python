@@ -1,6 +1,6 @@
 class Solution:
     def __init__(self):
-        print "leetcode 287"
+        print("leetcode 287")
 
     def findDuplicate(self,nums):
         if len(nums)>1:
@@ -9,13 +9,13 @@ class Solution:
             while slow != fast:
                 slow = nums[slow]
                 fast = nums[nums[fast]]
-                print slow,fast
-            print "find slow:",slow,"fast:",fast
+                print(slow,fast)
+            print("find slow:",slow,"fast:",fast)
             entry = 0
             while entry != slow:
                 entry = nums[entry]
                 slow = nums[slow]
-                print "res slow:",slow,"entry",entry
+                print("res slow:",slow,"entry",entry)
             return entry
         return -1
     

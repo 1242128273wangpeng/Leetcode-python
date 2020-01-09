@@ -2,7 +2,7 @@ class Solution:
     def __init__(self):
         self.list=[-1,2,1,4]
         self.res=list()
-        print "solution 16leetcode"
+        print("solution 16leetcode")
 
     def solve(self,target):
         if self.list is None or len(self.list)==0:
@@ -26,7 +26,7 @@ class Solution:
                 elif temp<target:
                     l+=1
                     while l<r-1 and slef.list[l]==self.list[l+1]: l+=1
-        print "target:",target,"res:",self.res
+        print("target:",target,"res:",self.res)
         return self.res
 s = Solution()
 s.solve(1)

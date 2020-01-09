@@ -6,29 +6,29 @@ class TreeNode:
 
 class Solution:
     def __init__(self):
-        print "levelOrder"
+        print("levelOrder")
 
     def levelOrder(self,root):
         if root == None:
             return 
         queue = [root]
         result = []
-        print "root type",type(root)
+        print("root type",type(root))
         while queue:
             ret = []
             retlen = len(queue)
             for i in range(retlen):
                 tmp = queue.pop(0)
-                print type(tmp),retlen
+                print(type(tmp),retlen)
                 ret.append(tmp.val)
-                if tmp<>None and tmp.l<>None:
-                    print "append l"
+                if tmp!=None and tmp.l!=None:
+                    print("append l")
                     queue.append(tmp.l)
-                if tmp<>None and tmp.r<>None:
-                    print "append r"
+                if tmp!=None and tmp.r!=None:
+                    print("append r")
                     queue.append(tmp.r)
             result.append(ret)
-        print result
+        print(result)
 
     def levelOrder1(self,root):
         res = []
@@ -37,17 +37,17 @@ class Solution:
             len_queue = len(queue)
             l = list()
             for i in range(len_queue):
-                print "i",i
+                print("i",i)
                 temp = queue.pop(0)
                 l.append(temp.val)
-                print "temp.val",temp.val
+                print("temp.val",temp.val)
                 if temp!=None and temp.left !=None:
-                    print "add left",temp.left
+                    print("add left",temp.left)
                     queue.append(temp.left)
                 if temp!=None and temp.right != None:
-                    print "add right",temp.right
+                    print("add right",temp.right)
                     queue.append(temp.right)
-            print "append l",len_queue
+            print("append l",len_queue)
             res.append(l)
         return res
 
